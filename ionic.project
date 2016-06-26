@@ -1,0 +1,11 @@
+{
+  "name": "OneMarketApp",
+  "app_id": "b4ade650",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

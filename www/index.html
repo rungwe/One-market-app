@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app-login.js"></script>
+	<!-- <script src="js/controllers.js"></script> -->
+  
+</head>
+  <body ng-app="onemarket" ng-controller="LoginCtrl" animation="slide-left-right-ios7">
+
+    <ion-pane>
+      <ion-header-bar align-title="center" class="bar-colour">
+		  
+		  <h1 class="title white">One Market</h1>
+		  <div class="buttons">
+			<button class="button theme-text" ng-click="Register=!Register" ng-hide="Register">Register</button>
+			<button class="button theme-text" ng-click="Register=!Register" ng-show="Register">Login</button>
+		  </div>
+	  </ion-header-bar>
+      <ion-content overflow-scroll="false" has-bouncing="true">
+		<div class="list">
+		  <label class="item item-input item-floating-label">
+		  <span class="input-label">Email</span>
+			<input ng-model="email" type="email" placeholder="Email">
+		  </label>
+
+		   <label class="item item-input item-floating-label" ng-show="Register">
+		  <span class="input-label">First Name</span>
+			<input ng-model="fname" type="text" placeholder="First Name">
+		  </label>
+
+		   <label class="item item-input item-floating-label" ng-show="Register">
+		  <span class="input-label">Last Name</span>
+			<input ng-model="lname" type="text" placeholder="Last Name">
+		  </label>
+
+		  <label class="item item-input item-floating-label">
+		  <span class="input-label">Password</span>
+			<input ng-model="paswd" type="password" placeholder="Password">
+		  </label>
+
+		   <label class="item item-input item-floating-label" ng-show="Register">
+		  <span class="input-label">Confirm Password</span>
+			<input ng-model="cnfpaswd" type="password" placeholder="Confirm Password">
+		  </label>
+
+
+		  <ion-toggle ng-model="Remember" toggle-class="toggle-calm">Remember</ion-toggle>
+
+		</div>
+	   <div class="row">
+			<div class="col text-right" ng-hide="Register">
+				<button class="button bar-colour white" ng-click="login(email,paswd)">
+				  Login
+				</button>
+			</div>
+			<div class="col text-right" ng-show="Register">
+				<button class="button bar-colour white" ng-click="register(email,fname,lname,paswd,cnfpaswd)">
+				  Register
+				</button>
+			</div>
+		</div>
+		<center><a href="#" class="theme-text">have forgotten your password?</a></center>
+      </ion-content>
+    </ion-pane>
+  </body>
+  <style>
+	.bar-colour{
+		background-color : #004A6E;
+		
+	}
+	.white{
+		color: white;
+	}
+	.theme-text{
+		color: #004A6E;
+	}
+	
+  </style>
+</html>

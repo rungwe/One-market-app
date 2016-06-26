@@ -1,0 +1,37 @@
+<ion-view id="page2" title="One Market">
+    <ion-content padding="false" overflow-scroll="false" has-bouncing="true" style="background-color:#F2F2F2;">
+		
+		<div class="row" ng-repeat="ad in ads">
+			<div class="col">
+				<img  src="{{ad.profile_pic}}" width="100%">
+			</div>
+			<div class="col col-80">
+				
+				  <div class="item ">
+					<h2>{{ad.name}}</h2>
+					<p>{{ad.title}}</p>
+					<p>{{ad.price}}</p>
+				  </div>
+				  <div class="item item-text-wrap">
+					{{ad.details}}
+					<img class="full-image" src="{{ad.ad_image}}">
+				  </div>
+				 
+				<div class="item item-divider row">
+					<div class="col">
+						<center><i class=" icon ion-thumbsup">{{ad.likes}}</i></center>
+					</div>
+					<div class="col">
+						<center><i class="icon ion-chatbox-working">{{ad.coments}}</i></center>
+					</div>
+					<div class="col">
+						<center><i class="icon ion-eye">{{ad.views}}</i></center>
+					</div>
+				</div>
+				  
+				
+			</div>
+		</div>
+	
+	</ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+{
+  "name": "Toast-PhoneGap-Plugin",
+  "homepage": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin",
+  "version": "2.5.2",
+  "_release": "2.5.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.5.2",
+    "commit": "093b523dc6bfb9b76fdd194e8f60e298e136564f"
+  },
+  "_source": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+  "_target": "~2.5.2",
+  "_originalSource": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+  "_direct": true
+}
